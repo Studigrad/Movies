@@ -1,0 +1,23 @@
+{
+  "name": "SQLite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs-mate": "^3.0.0",
+    "express": "^4.17.2",
+    "express-session": "^1.17.2",
+    "fs": "0.0.1-security",
+    "method-override": "^3.0.0",
+    "nodemon": "^2.0.15",
+    "path": "^0.12.7",
+    "sequelize": "^6.12.0-beta.3",
+    "sqlite3": "^5.0.2"
+  }
+}

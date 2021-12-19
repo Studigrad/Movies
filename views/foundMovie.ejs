@@ -1,0 +1,17 @@
+<%- include('partials/head')%>
+<body class="d-flex flex-column vh-100">
+    <%- include('partials/navbar')%>
+   
+    
+    <div class="card mx-auto mt-5" style="width: 18rem;">
+          
+        <div class="card-body">
+          <h3 class="card-title"><%= foundMovie.title %> </h5>
+          <h6 class="card-title">Format : <%= foundMovie.format %> </h5>
+          <h6 class="card-subtitle mb-2 text-muted">Year : <%= foundMovie.year %></h6>
+        <p class="card-text">Actors : <%= foundMovie.stars %></p>
+        </div>
+       
+        
+      </div>
+    <%- include('partials/footer')%>

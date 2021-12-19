@@ -1,0 +1,49 @@
+<%- include('partials/head')%>
+<body class="d-flex flex-column vh-100">
+    <%- include('partials/navbar')%>
+    <h1>Welcome <%= name %> </h1>
+    
+    <button onclick="myFunction()" class="btn btn-primary mx-auto ">Show Data</button>
+   <!--- <ul style="display:none;" id="showData" >
+        <% for(let text of newData){ %> 
+        <li ><%= JSON.stringify(text.Title) %> / Format:<%= JSON.stringify(text.Format) %></li>
+        <% } %> 
+    </ul>
+        -->
+    <div id="showData" class="card mx-auto mt-5" style="width: 18rem; display:none;">
+        <% let i=0 %> 
+        <% for(let text of newData){ %> 
+            <div class="card-body mt-3" >
+                <h3 class="card-title"><%= JSON.stringify(text.Title) %></h5>
+                    <button class="btn btn-primary "style="display:flex;" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        More Info
+                      </button>
+                    <div class="collapse" id="collapseExample">
+                        <div class="card card-body">
+                            <h6 class="card-title">Format:<%= JSON.stringify(text.Format) %></h5>
+                                <% var secondKey = Object.keys(newData[i])[1] %> 
+                       
+                               <h6 class="card-subtitle mb-2 text-muted">Year :<%= newData[i][secondKey] %> </h6>
+                               <p class="card-text">Actors : <%= JSON.stringify(text.Stars) %> </p>
+                        </div>
+                      </div>
+               
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+            <hr class="hr-text" data-content="AND">
+            <% i=i+1 %> 
+            <% } %> 
+      </div>
+    <script>
+        function myFunction() {
+            document.getElementById('showData').style.display = "block";
+            const fileSelector = document.getElementById('file-selector');
+          fileSelector.addEventListener('change', (event) => {
+            const fileList = event.target.files;
+         console.log(fileList);
+         });
+        }
+        
+        </script>
+<%- include('partials/footer')%>
